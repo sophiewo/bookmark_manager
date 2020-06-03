@@ -1,7 +1,6 @@
-feature "visit the home page" do
-    scenario "the user can see can click view bookmarks" do
-      visit('/')
-      click_button 'View Bookmarks'
-      expect(page).to have_content("Here are your bookmarks")
-    end
+feature 'index page content' do
+  scenario 'welcomes user to bookmark site' do
+    visit('/')
+    expect(page).to have_content('Welcome to Bookmark Manager!')
   end
+end

@@ -1,14 +1,14 @@
-require_relative './setup_test_database'
 
-ENV['RACK_ENV'] = 'test'
+ENV['ENVIROMENT'] = 'test'
 
-# require our Sinatra app file
 require File.join(File.dirname(__FILE__), '..', 'app.rb')
 
 require 'capybara'
 require 'capybara/rspec'
 require 'rspec'
 require './lib/bookmarks.rb'
+require_relative '../app'
+require_relative './setup_test_database'
 
 # tell Capybara about our app class
 Capybara.app = BookmarkManager
